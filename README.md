@@ -28,6 +28,3 @@ Developing this project provided valuable insights into web development practice
 
 ### Contributions
 Contributions to this project are welcome. Feel free to fork the repository, make improvements, and submit pull requests. For major changes, please open an issue first to discuss the proposed modifications.
-
-### License
-This project is licensed under the MIT License. For more details, refer to the LICENSE file.
