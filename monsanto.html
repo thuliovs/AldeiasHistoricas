@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aldeias Históricas</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="script.js" defer></script>
+        <link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons/css/all/all.css" rel="stylesheet">
+    </head>
+    <body>
+
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-title">
+                <img src="imagens/logo.png" alt="Logotipo Aldeias Históricas" id="logo">
+                <h2>Aldeias Históricas de Portugal</h2>
+            </a>
+            <nav>
+                <ul class="menu">
+                    <li class="menu-aldeias">Aldeias
+                        <ul class="lista-aldeias">
+                            <li><a href="almeida.html">Almeida</a></li>
+                            <li><a href="castelo_rodrigo.html">Castelo Rodrigo</a></li>
+                            <li><a href="linhares_da_beira.html">Linhares da Beira</a></li>
+                            <li><a href="marialva.html">Marialva</a></li>
+                            <li><a href="monsanto.html">Monsanto</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)" id="registroButton">Registro</a></li>
+                    <li><a href="javascript:void(0)" id="loginButton">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Modal de Registro -->
+    <div id="registroModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span><br>
+            <h2 style="text-align: center; color: #2c3e50; z-index: 2;"><b>Registro de Usuário</b></h2>
+            <form id="registrationForm" style="font-weight: bold">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" minlength="6" maxlength="20" required><br><br>
+                
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" minlength="6" maxlength="15" required><br><br>
+                
+                <button type="submit">Registrar</button><br>
+            </form>
+            <div class="modal-overlay"></div>
+        </div>
+    </div>
+
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span><br>
+            <h2 style="text-align: center; color: #2c3e50; z-index: 2;"><b>Login de Usuário</b></h2>
+            <form id="loginForm" style="font-weight: bold">
+                <label for="loginUsername">Nome de Usuário:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required><br><br>
+                
+                <label for="loginPassword">Senha:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required><br><br>
+                
+                <button type="submit">Entrar</button><br>
+            </form>
+            <div class="modal-overlay"></div>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="village-title-div">
+            <h1 class="village-title">This is Monsanto</h1>
+        </div>
+        <div class="aspect-ratio-container-village">
+            <div id="slideshow" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+                    <li data-target="#slideshow" data-slide-to="1"></li>
+                    <li data-target="#slideshow" data-slide-to="2"></li>
+                    <li data-target="#slideshow" data-slide-to="3"></li>
+                    <li data-target="#slideshow" data-slide-to="4"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <img src="imagens/monsanto/monsanto2.jpg" alt="Imagem de Castelo Rodrigo" class="carousel-image">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <img src="imagens/monsanto/monsanto3.jpg" alt="Imagem de Castelo Rodrigo" class="carousel-image">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <img src="imagens/monsanto/monsanto4.jpg" alt="Imagem de Castelo Rodrigo" class="carousel-image">
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="carousel-item">
+                        <img src="imagens/monsanto/monsanto5.jpg" alt="Imagem de Castelo Rodrigo" class="carousel-image">
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="carousel-item">
+                        <img src="imagens/monsanto/monsanto6.jpg" alt="Imagem de Castelo Rodrigo" class="carousel-image">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="margin-left: -50%;"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#slideshow" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="margin-right: -50%;"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+            </div>
+        </div>
+        
+
+        <!-- Relato -->
+        <section class="village-description">
+            <hr> <!-- Primeira barra horizontal -->
+            <p><b>Monsanto é a perfeita fusão entre natureza e história viva.</b> 
+                Empoleirada em um imponente cabeço granítico, esta aldeia 
+                histórica transporta o visitante a um mundo onde a arquitetura 
+                se entrelaça com penedos gigantescos, criando uma paisagem 
+                única e fascinante. Reconhecida como a <b>Aldeia Mais Portuguesa 
+                de Portugal</b>, Monsanto encanta com suas ruas sinuosas, casas 
+                esculpidas na rocha e um castelo que guarda memórias de 
+                resistências heroicas e tempos medievais. É um verdadeiro 
+                ícone do patrimônio cultural e natural de Portugal.</p>
+            <P><b>Antônio Canto</b>, turista vindo de Lisboa.</P>
+            <hr> <!-- Segunda barra horizontal -->
+        </section>
+
+
+        <section class="line-content line-content-2">
+            <div class="content-image">
+                <img src="imagens/promocional/monsanto/promocional1.jpg" alt="Imagem de Arquitetura Histórica">
+            </div>
+            <div class="content-text">
+                <h3>O Castelo de Monsanto e Suas Muralhas</h3>
+                <p>No ponto mais alto da aldeia, encontra-se o Castelo de Monsanto, uma fortaleza histórica construída sob as ordens da Ordem dos Templários no século XII. Este monumento imponente, embora parcialmente destruído pela explosão do paiol de munições no século XIX, ainda guarda vestígios de suas muralhas, torres de vigia e a antiga Capela de Santa Maria do Castelo. A subida íngreme é recompensada pelas vistas espetaculares que abrangem as paisagens escarpadas e os contrafortes da aldeia.</p>
+            </div>
+        </section>
+
+
+        <section class="line-content line-content-3">
+            <div class="content-text">
+                <h3>As Capelas e Igrejas de Monsanto</h3>
+                <p>Monsanto é rica em arquitetura religiosa, com destaque para a Capela de São Miguel, que remonta ao século XII e exibe ruínas fascinantes no topo da escarpa. Outro ponto notável é a Igreja Matriz de São Salvador, cuja fachada destaca-se pela ornamentada rosácea e pelos detalhes manuelinos. A Capela de São Pedro de Vir-à-Corça, situada na base do monte, é um exemplo do estilo românico e está cercada por histórias de feiras e tradições que marcaram a aldeia.</p>
+            </div>
+            <div class="content-image">
+                <img src="imagens/promocional/monsanto/promocional2.jpg" alt="Imagem de Cultura e Tradições">
+            </div>
+        </section>
+
+
+        <section class="line-content line-content-4">
+            <div class="content-image">
+                <img src="imagens/promocional/monsanto/promocional3.jpg" alt="Imagem de Natureza e Paisagens">
+            </div>
+            <div class="content-text">
+                <h3>A Torre de Lucano e a Aldeia Mais Portuguesa</h3>
+                <p>Um ícone da identidade de Monsanto é a Torre de Lucano, antiga torre sineira que hoje exibe uma réplica do Galo de Prata, símbolo do título recebido em 1938 de "Aldeia Mais Portuguesa de Portugal". A partir desta torre, é possível observar a perfeita fusão entre as construções da aldeia e os imponentes penedos de granito, que muitas vezes servem como paredes ou telhados das habitações.</p>
+            </div>
+        </section>
+
+
+        <section class="line-content line-content-5">
+            <div class="content-text">
+                <h3>Miradouros e Encantos Naturais</h3>
+                <p>Monsanto oferece vistas panorâmicas em locais como o Miradouro do Forno e o Penedo do Pé Calvo, ambos ideais para contemplar a beleza da paisagem e o contraste entre as formações rochosas e a vegetação. A Gruta de Monsanto, integrada aos penedos de granito, revela a engenhosidade das antigas construções que aproveitaram o ambiente natural de forma única.</p>
+            </div>
+            <div class="content-image">
+                <img src="imagens/promocional/monsanto/promocional4.webp" alt="Imagem de Gastronomia">
+            </div>
+        </section>
+
+
+        <section class="line-content line-content-6">
+            <div class="content-image">
+                <img src="imagens/promocional/monsanto/promocional5.jpg" alt="Imagem de Artesanato Local">
+            </div>
+            <div class="content-text">
+                <h3>As Furdas e a Vida Comunitária Medieval</h3>
+                <p>Na parte alta da aldeia, encontram-se as furdas, antigas pocilgas que ilustram a importância do porco como recurso alimentar para os habitantes medievais. Estas estruturas simples, embora desgastadas pelo tempo, são um testemunho da resiliência e das tradições locais que ainda ecoam nas ruas de Monsanto.</p>
+            </div>
+        </section>
+
+
+        <div class="accordion" style="margin-top: 50px; margin-bottom: 100px;">
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span><i class="fi fi-ss-map-marker"></i>&ensp;O que visitar?</span>
+                    <span class="icon"><i class="fi fi-sr-play" style="font-size: 20px;"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <section class="content-text">
+                        <p>
+                            Conhecida como a "Aldeia Mais Portuguesa de Portugal", Monsanto é um lugar único que encanta os visitantes com a sua arquitetura singular e história rica. O <b>Castelo de Monsanto</b>, localizado no topo da montanha, oferece vistas deslumbrantes e uma viagem pela história militar da região. Este castelo, que serviu como fortaleza templária, é um dos principais atrativos da vila.
+                        </p>
+                        <p>
+                            As <b>Casas Típicas</b> de Monsanto são um verdadeiro cartão-postal. Construídas entre gigantescos blocos de granito, elas se adaptam ao terreno acidentado e criam uma paisagem única. Ao passear pelas ruas estreitas, você encontrará casas que parecem emergir da própria rocha, testemunhando a habilidade dos antigos habitantes.
+                        </p>
+                        <p>
+                            Outro destaque é a <b>Igreja Matriz de São Salvador</b>, uma bela construção que mistura estilos românico e gótico, refletindo séculos de fé e devoção. Seu interior acolhe altares ricamente ornamentados e obras de arte sacra que merecem uma visita detalhada.
+                        </p>
+                        <p>
+                            Não deixe de explorar a <b>Torre do Relógio</b>, uma estrutura pitoresca que se destaca na paisagem da vila e oferece uma vista privilegiada do entorno. A torre é um marco importante da identidade de Monsanto e simboliza a passagem do tempo neste local encantador.
+                        </p>
+                        <p>
+                            Para os amantes da natureza, os trilhos ao redor de Monsanto proporcionam uma experiência incrível. A caminhada até o <b>Miradouro da Capela de São Miguel</b> é uma oportunidade de admirar vistas panorâmicas de tirar o fôlego e mergulhar na tranquilidade do ambiente natural. 
+                        </p>
+                        <p class="ultimo">
+                            Descubra Monsanto, onde cada pedra, casa e ruína conta uma história e transforma a sua visita em uma viagem inesquecível no tempo e na cultura portuguesa.
+                        </p>               
+                    </section>                    
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span><i class="fi fi-sr-restaurant"></i>&ensp;Onde comer?</span>
+                    <span class="icon"><i class="fi fi-sr-play" style="font-size: 20px;"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <section class="content-text">
+                        <p>
+                            Monsanto, também encanta os visitantes pelo paladar. A aldeia oferece uma gastronomia rica e tradicional que reflete o melhor da cultura beirã. Os restaurantes locais preservam receitas ancestrais, feitas com ingredientes frescos da região.
+                        </p>
+                        <p>
+                            Não deixe de experimentar o <b>Bacalhau à Lagareiro</b>, preparado com batatas ao murro, azeite extra virgem da região e alho. É uma das especialidades mais apreciadas por moradores e visitantes. Outra opção popular é o <b>Ensopado de Borrego</b>, um prato reconfortante e perfeito para os dias mais frios.
+                        </p>
+                        <p>
+                            A aldeia também é famosa pelos seus queijos artesanais, como o <b>Queijo da Serra</b>, que acompanha maravilhosamente o pão caseiro e os vinhos locais. Esses produtos representam a herança agrícola e o cuidado com a produção sustentável.
+                        </p>
+                        <p>
+                            Na doçaria, delícias como os <b>Coscorões</b> e os <b>Filhós</b> são imperdíveis. Estes doces, muitas vezes preparados durante as festividades locais, são um símbolo das tradições culinárias de Monsanto.
+                        </p>
+                        <p class="ultimo">
+                            Muitos dos restaurantes em Monsanto estão localizados em ambientes únicos, aproveitando as vistas panorâmicas das pedras que moldam a paisagem da aldeia. Aproveite o charme acolhedor e a hospitalidade dos anfitriões locais enquanto saboreia pratos que contam histórias e preservam o espírito da aldeia.
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span><i class="fi fi-ss-bank"></i>&ensp;Pontos turísticos</span>
+                    <span class="icon"><i class="fi fi-sr-play" style="font-size: 20px;"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <section class="content-text">
+                        <p>
+                            Repleta de pontos turísticos que encantam pela sua singularidade e pela forma como a arquitetura local se integra com a paisagem natural. Cada local é um testemunho da história rica e vibrante da aldeia.
+                        </p>
+                        <p>
+                            O <b>Castelo de Monsanto</b>, situado no ponto mais alto da aldeia, é uma fortaleza medieval que oferece vistas espetaculares sobre a região. Construído originalmente no século XII, este local já foi palco de batalhas importantes e hoje é um espaço onde história e natureza se encontram.
+                        </p>
+                        <p>
+                            A <b>Capela de São Miguel</b> é outro destaque imperdível. Este local de culto, situado próximo ao castelo, é uma construção românica que preserva um charme austero e uma ligação com a espiritualidade de tempos antigos.
+                        </p>
+                        <p>
+                            As <b>Casas de Monsanto</b>, construídas em torno de enormes blocos de granito, são uma marca registrada da aldeia. Passear pelas suas ruas estreitas é como entrar em um cenário único, onde as casas parecem fundir-se com a rocha, criando uma harmonia inigualável.
+                        </p>
+                        <p>
+                            Não deixe de visitar a <b>Igreja Matriz de São Salvador</b>, uma construção que mistura elementos românicos e góticos, com belos detalhes arquitetônicos e uma atmosfera de serenidade que reflete a vida da aldeia.
+                        </p>
+                        <p class="ultimo">
+                            Por fim, explore a <b>Capela de Santo António</b>, um local pitoresco e carregado de histórias e tradições locais. Este pequeno templo, com uma localização encantadora, é uma oportunidade de conhecer mais sobre a devoção dos moradores de Monsanto ao longo dos séculos.
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        
+        <h1 class="village-title" style="margin-bottom: 50px;">De partida?</h1>
+        
+        <!-- Video e Previsão do Tempo -->
+        <div class="videoandweather">
+            <div class="content-container">
+                <div id="weather-forecast">
+                    <h3 class="village-title">Nos próximos dias...</h3>
+                    <div id="forecast-container"></div>
+                </div>
+                <div class="aspect-ratio-container">
+                    <iframe src="https://www.youtube.com/embed/L3UodEhk7Fw" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen class="youtube-video"></iframe>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MAPA -->
+        <div class="aspect-ratio-container" style="width: 85%; margin: 0 auto;">
+            <div id="slideshow">
+                <iframe class="mapa" src="https://www.google.com/maps?q=Monsanto&output=embed"frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+
+
+        <div class="footer-slideandvideo">
+            <h1 class="village-title" style="margin-bottom: 35px;">A aventura espera-lhe!</h1>
+            <div class="content-container">
+                <div class="aspect-ratio-container">
+                    <div id="slideshow1" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#slideshow1" data-slide-to="0" class="active"></li>
+                            <li data-target="#slideshow1" data-slide-to="1"></li>
+                            <li data-target="#slideshow1" data-slide-to="2"></li>
+                            <li data-target="#slideshow1" data-slide-to="3"></li>
+                            <li data-target="#slideshow1" data-slide-to="4"></li>
+                        </ol>
+                        
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <a href="almeida.html">
+                                    <img src="imagens/almeida/almeida1.jpg" class="d-block w-100" alt="Imagem de Almeida">
+                                    <div class="carousel-caption">Almeida</div>
+                                </a>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <a href="castelo_rodrigo.html">
+                                    <img src="imagens/castelo rodrigo/castelo_rodrigo1.jpg" class="d-block w-100" alt="Imagem de castelo_rodrigo">
+                                    <div class="carousel-caption">Castelo Rodrigo</div>
+                                </a>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <a href="linhares_da_beira.html">
+                                    <img src="imagens/linhares da beira/linhares1.jpg" class="d-block w-100" alt="Imagem de linhares da beira">
+                                    <div class="carousel-caption">Linhares da Beira</div>
+                                </a>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="carousel-item">
+                                <a href="marialva.html">
+                                    <img src="imagens/marialva/marialva1.jpg" class="d-block w-100" alt="Imagem de marialva">
+                                    <div class="carousel-caption">Marialva</div>
+                                </a>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="carousel-item">
+                                <a href="monsanto.html">
+                                    <img src="imagens/monsanto/monsanto1.jpg" class="d-block w-100" alt="Imagem de monsanto">
+                                    <div class="carousel-caption">Monsanto</div>
+                                </a>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#slideshow1" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#slideshow1" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Próximo</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Video Youtube Ródapé -->
+                <div class="aspect-ratio-container">
+                    <iframe src="https://www.youtube.com/embed/kP2OtQrVm1o" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen class="youtube-video"></iframe>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const icons = {
+            1: 'sol.png',
+            2: 'sol.png',
+            3: 'nublado.png',
+            4: 'nublado.png',
+            5: 'aguaceiros.png',
+            6: 'aguaceiros.png',
+            7: 'chuva.png',
+            8: 'chuva.png',
+            9: 'chuva.png',
+            10: 'chuva.png',
+            11: 'chuva.png',
+            12: 'chuva.png',
+        };
+    
+        const weatherDescriptions = {
+            1: 'Céu limpo',
+            2: 'Pouco nublado',
+            3: 'Parcialmente nublado',
+            4: 'Céu nublado',
+            5: 'Aguaceiros',
+            6: 'Aguaceiros fracos',
+            7: 'Chuva',
+            8: 'Chuva fraca',
+            9: 'Chuva moderada',
+            10: 'Chuva forte',
+            11: 'Tempestade',
+            12: 'Corra!',
+        };
+    
+        async function fetchWeather() {
+            const forecastURL = `https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/1050200.json`;
+
+            try {
+                const response = await fetch(forecastURL);
+
+                if (!response.ok) {
+                    throw new Error(`Erro ao buscar dados da API: ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                const forecastContainer = document.getElementById('forecast-container');
+                forecastContainer.innerHTML = ''; // Limpar previsões anteriores
+
+                const rows = [document.createElement('div'), document.createElement('div')];
+                rows.forEach(row => {
+                    row.style.display = 'flex';
+                    row.style.justifyContent = 'center';
+                    row.style.gap = '20px';
+                    forecastContainer.appendChild(row);
+                });
+
+                data.data.slice(0, 5).forEach((day, index) => {
+                    const dayDiv = document.createElement('div');
+                    dayDiv.classList.add('day');
+
+                    const date = new Date(day.forecastDate).toLocaleDateString('pt-PT', {
+                        weekday: 'short',
+                        day: 'numeric',
+                        month: 'short',
+                    });
+                    const icon = icons[day.idWeatherType];
+                    const description = weatherDescriptions[day.idWeatherType];
+                    const maxTemp = day.tMax;
+                    const minTemp = day.tMin;
+
+                    dayDiv.innerHTML = 
+                    `<img src="imagens/${icon}" alt="${description}" title="${description}">
+                        <p><b>${minTemp}°C - ${maxTemp}°C</b></p>
+                        <p>${date}</p>`;
+
+                    if (index < 3) {
+                        rows[0].appendChild(dayDiv);
+                    } else {
+                        rows[1].appendChild(dayDiv);
+                    }
+                });
+            } catch (error) {
+                console.error('Erro ao buscar a previsão do tempo:', error);
+                document.getElementById('forecast-container').innerHTML = `<p>Erro ao carregar previsão do tempo.</p>`;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', fetchWeather);
+    </script>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>Autor do Projeto: Thúlio Silva</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aldeias Históricas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-title">
+                <img src="imagens/logo.png" alt="Logotipo Aldeias Históricas" id="logo">
+                <h2>Aldeias Históricas de Portugal</h2>
+            </a>
+            <nav>
+                <ul class="menu">
+                    <li class="menu-aldeias">Aldeias
+                        <ul class="lista-aldeias">
+                            <li><a href="almeida.html">Almeida</a></li>
+                            <li><a href="castelo_rodrigo.html">Castelo Rodrigo</a></li>
+                            <li><a href="linhares_da_beira.html">Linhares da Beira</a></li>
+                            <li><a href="marialva.html">Marialva</a></li>
+                            <li><a href="monsanto.html">Monsanto</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)" id="registroButton">Registro</a></li>
+                    <li><a href="javascript:void(0)" id="loginButton">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Modal de Registro -->
+    <div id="registroModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span><br>
+            <h2 style="text-align: center; color: #2c3e50; z-index: 2;"><b>Registro de Usuário</b></h2>
+            <form id="registrationForm" style="font-weight: bold">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" minlength="6" maxlength="20" required><br><br>
+                
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" minlength="6" maxlength="15" required><br><br>
+                
+                <button type="submit">Registrar</button><br>
+            </form>
+            <div class="modal-overlay"></div>
+        </div>
+    </div>
+
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span><br>
+            <h2 style="text-align: center; color: #2c3e50; z-index: 2;"><b>Login de Usuário</b></h2>
+            <form id="loginForm" style="font-weight: bold">
+                <label for="loginUsername">Nome de Usuário:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required><br><br>
+                
+                <label for="loginPassword">Senha:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required><br><br>
+                
+                <button type="submit">Entrar</button><br>
+            </form>
+            <div class="modal-overlay"></div>
+        </div>
+    </div>
+
+
+    <!-- Video de fundo em loop -->
+    <main>
+        <div class="video-background">
+            <video autoplay muted loop playsinline style="width: 100%;">
+                <source src="videobanner.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <div class="video-overlay">
+                <h2>Aldeias Históricas de Portugal</h2>
+                <p>Explore cada uma dessas aldeias para descobrir histórias fascinantes, paisagens deslumbrantes e patrimônios únicos.</p>
+            </div>
+        </div>
+
+
+        <section class="project-description">
+            <hr>
+            <p>O projeto <b>"Aldeias Históricas de Portugal"</b> visa promover e preservar 
+                o vasto patrimônio cultural, histórico e natural de algumas das mais 
+                emblemáticas aldeias do país. Localizadas em regiões de beleza única, 
+                essas aldeias mantêm vivas tradições seculares, oferecendo ao visitante 
+                uma viagem no tempo. Cada aldeia conta uma história própria, com vestígios 
+                de batalhas, castelos imponentes, igrejas históricas e lendas fascinantes. 
+                Ao visitar as Aldeias Históricas de Portugal, você se conecta com a alma e 
+                a identidade portuguesa, experimentando uma imersão profunda na cultura e 
+                no modo de vida tradicional, cercado por paisagens que mesclam natureza e 
+                arquitetura em perfeita harmonia.</p>
+            <P><b>Thúlio Silva</b>, um dos exploradores.</P>
+            <hr>
+        </section>
+
+
+        <section class="line-content line-content-2">
+            <div class="content-image">
+                <img src="imagens/promocional/index/imagempromocional1.jpg" alt="Imagem de Arquitetura Histórica">
+            </div>
+            <div class="content-text">
+                <h3>Arquitetura Histórica</h3>
+                <p>Muitas das aldeias ainda preservam construções medievais, como castelos, muralhas, igrejas e pontes de pedra. Essas estruturas são testemunhas de séculos de história e refletem a importância estratégica dessas localidades ao longo dos tempos.</p>
+            </div>
+        </section>
+
+
+        <section class="line-content line-content-3">
+            <div class="content-text">
+                <h3>Cultura e Tradições</h3>
+                <p>Cada aldeia é rica em tradições que foram passadas de geração em geração. Festivais locais, danças folclóricas e celebrações religiosas ainda são comuns, permitindo que os visitantes experimentem o verdadeiro espírito português.</p>
+            </div>
+            <div class="content-image">
+                <img src="imagens/promocional/index/promocional2.jpg" alt="Imagem de Cultura e Tradições">
+            </div>
+        </section>
+
+
+        <section class="line-content line-content-4">
+            <div class="content-image">
+                <img src="imagens/promocional/index/promocional3.jpg" alt="Imagem de Natureza e Paisagens">
+            </div>
+            <div class="content-text">
+                <h3>Natureza e Paisagens</h3>
+                <p>As aldeias estão localizadas em regiões de beleza natural impressionante, com vistas panorâmicas para montanhas, vales e rios. Trilhas, passeios de bicicleta e caminhadas são atividades populares para explorar a natureza ao redor.</p>
+            </div>
+        </section>
+
+
+        <section class="line-content line-content-5">
+            <div class="content-text">
+                <h3>Gastronomia</h3>
+                <p>A culinária local é uma experiência à parte. Em cada aldeia, você pode saborear pratos típicos da região, preparados com ingredientes frescos e muitas vezes baseados em receitas tradicionais que refletem a rica cultura alimentar portuguesa.</p>
+            </div>
+            <div class="content-image">
+                <img src="imagens/promocional/index/promocional4.jpg" alt="Imagem de Gastronomia">
+            </div>
+        </section>
+
+
+        <section class="line-content line-content-6">
+            <div class="content-image">
+                <img src="imagens/promocional/index/promocional5.jpg" alt="Imagem de Artesanato Local">
+            </div>
+            <div class="content-text">
+                <h3>Artesanato Local</h3>
+                <p>Muitos habitantes dessas aldeias mantêm viva a tradição do artesanato, produzindo desde cerâmicas até peças de tecido e bordados. É uma excelente oportunidade para adquirir lembranças únicas e apoiar o trabalho artesanal local.</p>
+            </div>
+        </section>
+
+
+        <div class="footer-slideandvideo">
+            <h1 class="village-title" style="margin-bottom: 35px;">A aventura espera-lhe!</h1>
+            <div class="content-container">
+                <div class="aspect-ratio-container">
+                    <div id="slideshow" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+                            <li data-target="#slideshow" data-slide-to="1"></li>
+                            <li data-target="#slideshow" data-slide-to="2"></li>
+                            <li data-target="#slideshow" data-slide-to="3"></li>
+                            <li data-target="#slideshow" data-slide-to="4"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <a href="almeida.html">
+                                    <img src="imagens/almeida/almeida1.jpg" class="d-block w-100" alt="Imagem de Almeida">
+                                    <div class="carousel-caption">Almeida</div>
+                                </a>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <a href="castelo_rodrigo.html">
+                                    <img src="imagens/castelo rodrigo/castelo_rodrigo1.jpg" class="d-block w-100" alt="Imagem de castelo_rodrigo">
+                                    <div class="carousel-caption">Castelo Rodrigo</div>
+                                </a>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <a href="linhares_da_beira.html">
+                                    <img src="imagens/linhares da beira/linhares1.jpg" class="d-block w-100" alt="Imagem de linhares da beira">
+                                    <div class="carousel-caption">Linhares da Beira</div>
+                                </a>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="carousel-item">
+                                <a href="marialva.html">
+                                    <img src="imagens/marialva/marialva1.jpg" class="d-block w-100" alt="Imagem de marialva">
+                                    <div class="carousel-caption">Marialva</div>
+                                </a>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="carousel-item">
+                                <a href="monsanto.html">
+                                    <img src="imagens/monsanto/monsanto1.jpg" class="d-block w-100" alt="Imagem de monsanto">
+                                    <div class="carousel-caption">Monsanto</div>
+                                </a>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#slideshow" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Próximo</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Video Youtube-->
+                <div class="aspect-ratio-container">
+                    <iframe src="https://www.youtube.com/embed/kP2OtQrVm1o" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen class="youtube-video"></iframe>
+                </div>
+
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Autor do Projeto: Thúlio Silva</p>
+    </footer>
+</body>
+</html>
